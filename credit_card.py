@@ -75,13 +75,6 @@ plt.xticks(rotation=45)
 plt.title('Fraud by State')
 plt.show()
 
-# Date handling
-#df['trans_date_trans_time'] = pd.to_datetime(df['trans_date_trans_time'])
-#df['hour'] = df['trans_date_trans_time'].dt.hour
-#df['dayofweek'] = df['trans_date_trans_time'].dt.dayofweek
-#df['age'] = pd.to_datetime('2020-01-01') - pd.to_datetime(df['dob'])
-#df['age'] = df['age'].dt.days // 365
-
 # Label Encoding categorical features
 cat_cols = ['merchant', 'category', 'gender', 'state', 'city']
 for col in cat_cols:
@@ -212,6 +205,7 @@ joblib.dump(results[best_model_name]['best_estimator'], 'fraud_detection_pipelin
 df = pd.read_csv('fraudTest.csv')
 
 print(categorical_cols,'\n',numeric_cols)
+
 # Date handling
 df['trans_date_trans_time'] = pd.to_datetime(df['trans_date_trans_time'])
 df['hour'] = df['trans_date_trans_time'].dt.hour

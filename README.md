@@ -125,3 +125,10 @@ Feel free to fork, modify, and enhance the project
 ##License
 
 This project is for educational purposes. Feel free to use and modify it with credit.
+
+## 🖼️ App Screenshot
+
+Here is a preview of the Credit Card Fraud Detection app:
+![App Screenshot](Screenshot.png)
+
+

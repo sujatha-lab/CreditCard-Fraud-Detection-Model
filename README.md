@@ -63,19 +63,19 @@ Precision: 98%
 
 Recall: 95%
 
-## Dataset
+## **Dataset**
 
 The project uses a CSV file fraudTest.csv that contains anonymized credit card transaction data.
 
 ## Make sure the dataset is in the project root directory before running credit_card.py.
 
-## Credits
+## **Credits**
 
-Built by: Sujatha Lab
+Built by: Sujatha-Lab
 
 Dataset Source: Kaggle - Credit Card Fraud Detection
 
-Libraries Used:
+##**Libraries Used:**
 
 scikit-learn
 
@@ -87,7 +87,7 @@ pandas
 
 joblib
 
-## Installation & Setup (Local)
+## **Installation & Setup (Local)**
 
 1. Clone the repository
 
@@ -122,7 +122,7 @@ Do not commit sensitive data (real credit card info, if any)
 
 Feel free to fork, modify, and enhance the project
 
-##License
+##**License**
 
 This project is for educational purposes. Feel free to use and modify it with credit.
 

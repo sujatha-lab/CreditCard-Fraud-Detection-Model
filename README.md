@@ -1,10 +1,10 @@
-#  Credit Card Fraud Detection App
+# 💳  Credit Card Fraud Detection App
 
 This project is a machine learning-based web application that detects fraudulent credit card transactions. It is built using Python, scikit-learn, XGBoost, and deployed via Streamlit.
 
 ---
 
-## Features
+## 🚀Features
 
 - Trained on a dataset of real credit card transactions
 - Supports multiple ML models: Random Forest, Logistic Regression, XGBoost
@@ -14,13 +14,13 @@ This project is a machine learning-based web application that detects fraudulent
 
 ---
 
-##  Live Demo
+## 🌐 Live Demo
 
-[Click here to try the app on Streamlit](https://creditcard-fraud-detection-model-9pzo5brcfwmxdmzsifwfva.streamlit.app/)
+👉[Click here to try the app on Streamlit](https://creditcard-fraud-detection-model-9pzo5brcfwmxdmzsifwfva.streamlit.app/)
 
 ---
 
-##  Project Structure
+## 🗂️ Project Structure
 
 | File | Description |
 |------|-------------|
@@ -34,7 +34,7 @@ This project is a machine learning-based web application that detects fraudulent
 
 ---
 
-##  How It Works
+## ⚙️  How It Works
 
 1. Load dataset from `fraudTest.csv`
 2. Explore the data (EDA), handle class imbalance if any
@@ -45,7 +45,7 @@ This project is a machine learning-based web application that detects fraudulent
 
 ---
 
-## Example Usage (CLI)
+## 💻 Example Usage (CLI)
 
 If you're testing locally:
 
@@ -53,29 +53,21 @@ If you're testing locally:
 python credit_card.py  # Trains the model
 streamlit run app.py   # Launches the web app
 
-## Model Performance
+```
 
-Update with actual metrics
-
-Accuracy: 99%
-
-Precision: 98%
-
-Recall: 95%
-
-## **Dataset**
+##📊**Dataset**
 
 The project uses a CSV file fraudTest.csv that contains anonymized credit card transaction data.
 
 ## Make sure the dataset is in the project root directory before running credit_card.py.
 
-## **Credits**
+## 👨‍💻 **Credits**
 
 Built by: Sujatha-Lab
 
 Dataset Source: Kaggle - Credit Card Fraud Detection
 
-##**Libraries Used:**
+## 📚**Libraries Used:**
 
 scikit-learn
 
@@ -87,7 +79,7 @@ pandas
 
 joblib
 
-## **Installation & Setup (Local)**
+## 🛠️**Installation & Setup (Local)**
 
 1. Clone the repository
 
@@ -114,7 +106,7 @@ pip install -r requirements.txt
 streamlit run app.py
 
 ```
-## Notes
+##📝 **Notes**
 
 Ensure .venv/ is added to .gitignore
 
@@ -122,7 +114,7 @@ Do not commit sensitive data (real credit card info, if any)
 
 Feel free to fork, modify, and enhance the project
 
-##**License**
+##📄 **License**
 
 This project is for educational purposes. Feel free to use and modify it with credit.
 

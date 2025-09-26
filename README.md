@@ -157,47 +157,47 @@ Each model was optimized using `GridSearchCV` with cross-validation. The final m
 
 ---
 
----
-
 ## 📊 Model Evaluation Plots
 
 Visual summaries of the model's performance and dataset insights.
-
----
-
-## 📊 Model Evaluation Plots
-
-Visual summaries of the model's performance and dataset insights.
-
----
-
-### 📉 ROC-AUC Curve
-![ROC-AUC Curve](roc_auc_Curve.png)
-
----
-
-### 📊 Confusion Matrix
-![Confusion Matrix](confusion_matrix.png)
 
 ---
 
 ### 📈 Class Distribution of Transactions
-![Class Distribution of Transactions](Class_distribution_of_transactions.png)
-
----
-
-### 🗺️ Fraud by State
-![Fraud by State](fraud_by_state.png)
-
----
-
-### 🛍️ Fraud by Category
-![Fraud by Category](fraud_by_category.png)
+Shows class imbalance (fraud vs. genuine).
+![Class Distribution of Transactions](Class_distribution_of_transactions.png) 
 
 ---
 
 ### 💰 Transaction Amount Distribution
+Understanding how transaction amounts vary.
 ![Transaction Amount Distribution](transaction_amount_distribution.png)
+
+---
+
+### 🛍️ Fraud by Category
+Where fraud occurs based on merchant category.
+![Fraud by Category](fraud_by_category.png)  
+
+---
+
+### 🗺️ Fraud by State
+Geographical view of fraudulent transactions.
+![Fraud by State](fraud_by_state.png)
+
+--
+
+### 📊 Confusion Matrix
+True/false positives and negatives.
+![Confusion Matrix](confusion_matrix.png) 
+
+---
+
+### 📉 ROC-AUC Curve
+Model's ability to distinguish fraud from normal.
+![ROC-AUC Curve](ROC_AUC_curve.png) 
+
+---
 
 ## 🧪 Example Usage (CLI)
 
@@ -206,8 +206,8 @@ Run locally with:
 ```bash
 python credit_card.py        # Trains and saves model
 streamlit run app.py         # Launches web app
-
-
+```
+---
 ### 🧪 Final Model Summary
 
 - **Model Used**: XGBoost
@@ -216,7 +216,8 @@ streamlit run app.py         # Launches web app
 - **Trained With**: SMOTE + GridSearchCV
 - **Saved Model**: `fraud_detection_pipeline.pkl`
 
-The best model is integrated into the Streamlit app for real-time fraud prediction. It outputs both the **predicted class** (fraud or not) and **fraud probability**.
+The best model is integrated into the Streamlit app for real-time fraud prediction.
+It outputs both the **predicted class** (fraud or not) and **fraud probability**.
 
 ---
 

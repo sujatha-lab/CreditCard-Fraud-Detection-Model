@@ -131,4 +131,95 @@ This project is for educational purposes. Feel free to use and modify it with cr
 Here is a preview of the Credit Card Fraud Detection app:
 ![App Screenshot](Screenshot.png)
 
+## 🧠 Model
 
+This project tackles a **highly imbalanced dataset** (only ~0.38% fraud cases). To address this, we used **SMOTE** (Synthetic Minority Over-sampling Technique) during training to synthetically balance the class distribution.
+
+We trained and evaluated the following classification models:
+
+- **Logistic Regression**
+- **Random Forest**
+- **XGBoost**
+
+Each model was optimized using `GridSearchCV` with cross-validation. The final model was selected based on **ROC-AUC**, **F1-score**, and **recall**, prioritizing fraud detection accuracy.
+
+### 📈 Model Comparison (on Test Set)
+
+| Metric      | Logistic Regression | Random Forest | XGBoost (Best) |
+|-------------|---------------------|---------------|----------------|
+| Accuracy    | 94.00%              | 99.89%        | **99.80%**     |
+| Precision   | 5.00%               | 73.00%        | **70.19%**     |
+| Recall      | 74.00%              | 76.00%        | **85.08%**     |
+| F1-score    | 9.00%               | 75.00%        | **76.92%**     |
+| ROC AUC     | 85.32%              | 98.87%        | **99.62%**     |
+
+> 🏆 **Best Model**: XGBoost — selected for its high fraud recall and ROC-AUC.
+
+---
+
+---
+
+## 📊 Model Evaluation Plots
+
+Visual summaries of the model's performance and dataset insights.
+
+---
+
+## 📊 Model Evaluation Plots
+
+Visual summaries of the model's performance and dataset insights.
+
+---
+
+### 📉 ROC-AUC Curve
+![ROC-AUC Curve](roc_auc_Curve.png)
+
+---
+
+### 📊 Confusion Matrix
+![Confusion Matrix](confusion_matrix.png)
+
+---
+
+### 📈 Class Distribution of Transactions
+![Class Distribution of Transactions](Class_distribution_of_transactions.png)
+
+---
+
+### 🗺️ Fraud by State
+![Fraud by State](fraud_by_state.png)
+
+---
+
+### 🛍️ Fraud by Category
+![Fraud by Category](fraud_by_category.png)
+
+---
+
+### 💰 Transaction Amount Distribution
+![Transaction Amount Distribution](transaction_amount_distribution.png)
+
+## 🧪 Example Usage (CLI)
+
+Run locally with:
+
+```bash
+python credit_card.py        # Trains and saves model
+streamlit run app.py         # Launches web app
+
+
+### 🧪 Final Model Summary
+
+- **Model Used**: XGBoost
+- **ROC-AUC**: 99.62%
+- **F1-score**: 76.92%
+- **Trained With**: SMOTE + GridSearchCV
+- **Saved Model**: `fraud_detection_pipeline.pkl`
+
+The best model is integrated into the Streamlit app for real-time fraud prediction. It outputs both the **predicted class** (fraud or not) and **fraud probability**.
+
+---
+
+
+
+> ✅ You can find all training code in `credit_card.py`, and the real-time prediction logic in `main.py` and `app.py`.

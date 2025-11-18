@@ -226,17 +226,23 @@ preprocessor = ColumnTransformer(
 )
 
 # trained optimized model(using actual best params)
-best_rf_model = RandomForestClassifier(
+best_xgb_model = XGBClassifier(
     n_estimators=200,
     max_depth=10,
-    random_state=42
+    learning_rate=0.1,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    eval_metric='logloss',
+    random_state=42,
+    use_label_encoder=False,
+    tree_method='hist'
 )
 
 # Full pipeline
 full_pipeline = ImbPipeline([
     ('preprocessor', preprocessor),
     ('smote', SMOTE(random_state=42)),
-    ('classifier', best_rf_model)
+    ('classifier', best_xgb_model)
 ])
 
 # Fit using pipeline
